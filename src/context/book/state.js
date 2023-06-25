@@ -5,8 +5,8 @@
 // favoriteBooks should be the value from localStorage or an empty array if localStorage value is falsy
 const initialState = {
     bookSearchResults: [], 
-    favoriteBooks: (localStorage.getItem("favoriteBooks") ? 
-        localStorage.getItem("favoriteBooks") : [] )
+    favoriteBooks: JSON.parse(localStorage.getItem('favoriteBooks')) || []
+       
 }
 
 export default initialState
